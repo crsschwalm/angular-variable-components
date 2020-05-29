@@ -4,32 +4,32 @@ import {
   OnInit,
   ViewChild,
   ComponentFactoryResolver,
-  OnDestroy
-} from "@angular/core";
-import { TileDirective } from "./tile.directive";
-import { TileItem } from "./tile-item";
-import { TileComponent } from "./tile.component";
+  OnDestroy,
+} from '@angular/core';
+import { TileDirective } from './tile.directive';
+import { TileItem } from './tile-item';
+import { TileComponent } from './tile.component';
 
 @Component({
-  selector: "app-tile-banner",
+  selector: 'app-tile-banner',
   template: `
     <div class="tile-banner-example">
       <h3>Advertisements</h3>
       <ng-template tile-host></ng-template>
     </div>
-  `
+  `,
 })
-export class AdBannerComponent implements OnInit, OnDestroy {
-  @Input() ads: TileItem[];
-  currentAdIndex = -1;
-  @ViewChild(TileDirective, { static: true }) adHost: TileDirective;
+export class TileBannerComponent implements OnInit, OnDestroy {
+  @Input() tiles: TileItem[];
+  currentTileIndex = -1;
+  @ViewChild(TileDirective, { static: true }) tileHost: TileDirective;
   interval: any;
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver) {}
 
   ngOnInit() {
     this.loadComponent();
-    this.getAds();
+    this.getTiles();
   }
 
   ngOnDestroy() {
@@ -37,21 +37,21 @@ export class AdBannerComponent implements OnInit, OnDestroy {
   }
 
   loadComponent() {
-    this.currentAdIndex = (this.currentAdIndex + 1) % this.ads.length;
-    const adItem = this.ads[this.currentAdIndex];
+    this.currentTileIndex = (this.currentTileIndex + 1) % this.tiles.length;
+    const tileItem = this.tiles[this.currentTileIndex];
 
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(
-      adItem.component
+      tileItem.component,
     );
 
-    const viewContainerRef = this.adHost.viewContainerRef;
+    const viewContainerRef = this.tileHost.viewContainerRef;
     viewContainerRef.clear();
 
     const componentRef = viewContainerRef.createComponent(componentFactory);
-    (<AdComponent>componentRef.instance).data = adItem.data;
+    (<TileComponent>componentRef.instance).data = tileItem.data;
   }
 
-  getAds() {
+  getTiles() {
     this.interval = setInterval(() => {
       this.loadComponent();
     }, 3000);

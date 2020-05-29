@@ -1,0 +1,42 @@
+{
+    "title": "GMF Landing Page",
+    "left-rail": [
+        {
+            "type": "PlaceholderShortComponent",
+            "props": {
+                "name": "Bombasto",
+                "bio": "Brave as they come"
+            }
+        },
+        {
+            "type": "PlaceholderLongComponent",
+            "props": {
+                "headline": "Openings in all departments",
+                "body": "Apply today"
+            }
+        }
+    ],
+    "right-rail": [
+        {
+            "type": "PlaceholderShortComponent",
+            "props": {
+                "name": "Dr IQ",
+                "bio": "Smart as they come"
+            }
+        },
+        {
+            "type": "PlaceholderShortComponent",
+            "props": {
+                "name": "Another Name",
+                "bio": "This is an example"
+            }
+        },
+        {
+            "type": "PlaceholderLongComponent",
+            "props": {
+                "headline": "Hiring for several positions",
+                "body": "Submit your resume today!"
+            }
+        }
+    ]
+}

@@ -4,18 +4,15 @@ import { TileComponent } from './tile.component';
 @Component({
   template: `
     <div class="job-ad">
-      <h4>{{data.headline}}</h4>
+      <h4>{{ data.headline }}</h4>
 
-      {{data.body}}
+      {{ data.body }}
     </div>
-  `
+  `,
 })
 export class PlaceholderLongComponent implements TileComponent {
   @Input() data: any;
-
 }
-
-
 
 /*
 Copyright Google LLC. All Rights Reserved.
