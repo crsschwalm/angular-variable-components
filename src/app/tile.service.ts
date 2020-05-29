@@ -7,14 +7,16 @@ import landingPageConfig from '../assets/landing-page-options.json';
 
 @Injectable()
 export class TileService {
-  getTiles() {
-    const AvailableComponents = {
-      PlaceholderLongComponent,
-      PlaceholderShortComponent,
-    };
-    return landingPageConfig['left-rail'].map(
+  //get from component library file
+  availableComponents = {
+    PlaceholderLongComponent,
+    PlaceholderShortComponent,
+  };
+
+  getTileByLayout(layoutName: 'right-rail' | 'left-rail') {
+    return landingPageConfig[layoutName].map(
       (component) =>
-        new TileItem(AvailableComponents[component.type], component.props),
+        new TileItem(this.availableComponents[component.type], component.props),
     );
   }
 }

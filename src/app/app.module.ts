@@ -1,24 +1,24 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
-import { AppComponent } from "./app.component";
-import { PlaceholderShortComponent } from "./placeholder-short.component";
-import { PlaceholderLongComponent } from "./placeholder-long.component";
-import { TileBannerComponent } from "./tile-banner.component";
-import { TileDirective } from "./tile.directive";
-import { TileService } from "./tile.service";
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+import { PlaceholderShortComponent } from './placeholder-short.component';
+import { PlaceholderLongComponent } from './placeholder-long.component';
+import { TileGroupComponent } from './tile-group.component';
+import { TileDirective } from './tile.directive';
+import { TileService } from './tile.service';
 
 @NgModule({
   imports: [BrowserModule],
   providers: [TileService],
   declarations: [
     AppComponent,
-    TileBannerComponent,
+    TileGroupComponent,
     PlaceholderShortComponent,
     PlaceholderLongComponent,
-    TileDirective
+    TileDirective,
   ],
   entryComponents: [PlaceholderLongComponent, PlaceholderShortComponent],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
   constructor() {}

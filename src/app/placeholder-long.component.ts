@@ -3,9 +3,8 @@ import { TileComponent } from './tile.component';
 
 @Component({
   template: `
-    <div class="job-ad">
-      <h4>{{ data.headline }}</h4>
-
+    <div class="placeholder-long">
+      <h3>{{ data.headline }}</h3>
       {{ data.body }}
     </div>
   `,
@@ -13,9 +12,3 @@ import { TileComponent } from './tile.component';
 export class PlaceholderLongComponent implements TileComponent {
   @Input() data: any;
 }
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/

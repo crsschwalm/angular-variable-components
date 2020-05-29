@@ -15,6 +15,13 @@
         "headline": "Openings in all departments",
         "body": "Apply today"
       }
+    },
+    {
+      "type": "PlaceholderShortComponent",
+      "props": {
+        "name": "Announcements",
+        "bio": "Most recent news"
+      }
     }
   ],
   "right-rail": [
@@ -39,6 +46,14 @@
       "props": {
         "headline": "Hiring for several positions",
         "body": "Submit your resume today!"
+      }
+    },
+
+    {
+      "type": "PlaceholderShortComponent",
+      "props": {
+        "name": "Short Placeholder",
+        "bio": "This is yet another example"
       }
     }
   ]

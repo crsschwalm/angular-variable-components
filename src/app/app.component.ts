@@ -6,23 +6,24 @@ import { TileItem } from './tile-item';
 @Component({
   selector: 'app-root',
   template: `
-    <div>
-      <app-tile-banner [tiles]="tiles"></app-tile-banner>
+    <div class="container">
+      <div class="left-rail">
+        <tile-group [tiles]="leftTiles" groupTitle="Left Col"></tile-group>
+      </div>
+      <div class="right-rail">
+        <tile-group [tiles]="rightTiles" groupTitle="Right Col"></tile-group>
+      </div>
     </div>
   `,
 })
 export class AppComponent implements OnInit {
-  tiles: TileItem[];
+  leftTiles: TileItem[];
+  rightTiles: TileItem[];
 
   constructor(private tileService: TileService) {}
 
   ngOnInit() {
-    this.tiles = this.tileService.getTiles();
+    this.leftTiles = this.tileService.getTileByLayout('left-rail');
+    this.rightTiles = this.tileService.getTileByLayout('right-rail');
   }
 }
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/
