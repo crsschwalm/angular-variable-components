@@ -4,11 +4,10 @@ import {
   OnInit,
   ViewChild,
   ComponentFactoryResolver,
-  OnDestroy,
 } from '@angular/core';
-import { TileDirective } from './tile.directive';
-import { TileItem } from './tile-item';
-import { TileComponent } from './tile.component';
+import { TileDirective } from '../app/tile.directive';
+import { TileItem } from '../app/tile-item';
+import { TileComponent } from '../app/tile.type';
 
 @Component({
   selector: 'tile-group',

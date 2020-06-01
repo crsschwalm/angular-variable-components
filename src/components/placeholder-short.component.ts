@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { TileComponent } from './tile.component';
+import { TileComponent } from '../app/tile.type';
 
 @Component({
   template: `

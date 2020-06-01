@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-import { TileService } from './tile.service';
-import { TileItem } from './tile-item';
+import { TileService } from '../services/tile.service';
+import { TileItem } from '../app/tile-item';
 
 @Component({
   selector: 'app-root',
