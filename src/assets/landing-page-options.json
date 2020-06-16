@@ -2,9 +2,16 @@
   "title": "GMF Landing Page",
   "left-rail": [
     {
+      "type": "PlaceholderLongComponent",
+      "props": {
+        "headline": "TESTING",
+        "body": "Apply today"
+      }
+    },
+    {
       "type": "PlaceholderShortComponent",
       "props": {
-        "name": "Bombasto",
+        "name": "Bombasto 1",
         "bio": "Brave as they come"
       }
     },
@@ -28,8 +35,22 @@
     {
       "type": "PlaceholderShortComponent",
       "props": {
+        "name": "Hello World",
+        "bio": "Smart as they come"
+      }
+    },
+    {
+      "type": "PlaceholderShortComponent",
+      "props": {
         "name": "Dr IQ",
         "bio": "Smart as they come"
+      }
+    },
+    {
+      "type": "PlaceholderShortComponent",
+      "props": {
+        "name": "Carson is testing",
+        "bio": "This is an example of carson testing"
       }
     },
 

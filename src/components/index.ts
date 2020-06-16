@@ -1,11 +1,15 @@
 import { AppComponent } from './app.component';
 import { PlaceholderLongComponent } from './placeholder-long.component';
 import { PlaceholderShortComponent } from './placeholder-short.component';
-import { TileGroupComponent } from './tile-group.component';
+import { LeftRailComponent } from './left-rail.component';
+import { DynamicComponent } from './dynamic-component.component';
+import { RightRailComponent } from './right-rail.component';
 
 export {
   AppComponent,
   PlaceholderLongComponent,
   PlaceholderShortComponent,
-  TileGroupComponent,
+  LeftRailComponent,
+  DynamicComponent,
+  RightRailComponent,
 };

@@ -6,11 +6,21 @@ import { TileItem } from '../app/tile-item';
   selector: 'app-root',
   template: `
     <div class="container">
-      <div class="left-rail">
-        <tile-group [tiles]="leftTiles" groupTitle="Left Col"></tile-group>
-      </div>
-      <div class="right-rail">
-        <tile-group [tiles]="rightTiles" groupTitle="Right Col"></tile-group>
+      <div class="row">
+        <div class="col-lg-9 col-md-12 col-sm-12">
+          <left-rail
+            [tiles]="leftTiles"
+            groupTitle="Left Col"
+            groupID="left-rail"
+          ></left-rail>
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12">
+          <right-rail
+            [tiles]="rightTiles"
+            groupTitle="Right Col"
+            groupID="right-rail"
+          ></right-rail>
+        </div>
       </div>
     </div>
   `,
